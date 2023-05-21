@@ -4,12 +4,12 @@
 # control, add individual board + shield combinations to
 # the `include` property, e.g:
 #
-board: [ "seeeduino_xiao_ble" ]
-shield: [ "ferris_sweed_four_left", "ferris_sweed_four_right" ]
 include:
   - board: seeeduino_xiao_ble
-    shield: ferris_sweed_four
+    shield: ferris_sweed_four_left
 
+  - board: seeeduino_xiao_ble
+    shield: ferris_sweed_four_right
 # ---
 # include:
 #   - board: seeeduino_xiao_ble
