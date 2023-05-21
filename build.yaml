@@ -7,7 +7,6 @@
 include:
   - board: seeeduino_xiao_ble
     shield: ferris_sweed_four_left
-
   - board: seeeduino_xiao_ble
     shield: ferris_sweed_four_right
 # ---
