@@ -11,7 +11,7 @@
 #
 file_format: "1"
 id: ferris_sweed_four
-name: Corne
+name: ferris_sweed_four
 type: shield
 requires: [seeeduino_xiao_ble]
 features:
