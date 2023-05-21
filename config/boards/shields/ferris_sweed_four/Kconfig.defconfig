@@ -1,0 +1,6 @@
+if SHIELD_FERRIS_SWEED_FOUR
+
+config ZMK_KEYBOAR_NAME
+    default "ferris_sweed"
+
+endif

@@ -1,0 +1,5 @@
+config SHIELD_FERRIS_SWEED_FOUR_LEFT
+    def_bool ${shields_list_contains, ferris_sweed_four_left}
+
+config SHIELD_FERRIS_SWEED_FOUR_RIGHT
+    def_bool ${shields_list_contains, ferris_sweed_four_right}
