@@ -4,3 +4,21 @@ config ZMK_KEYBOAR_NAME
     default "ferris_sweed"
 
 endif
+if SHIELD_FERRIS_SWEED_FOUR_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "ferris_sweed"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SSHIELD_FERRIS_SWEED_FOUR_LEFT || SHIELD_FERRIS_SWEED_FOUR_LEFT
+config ZMK_SPLIT
+    default y
+
+endif # ZMK_DISPLAY
+
+
+endif
