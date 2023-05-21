@@ -4,18 +4,22 @@
 # control, add individual board + shield combinations to
 # the `include` property, e.g:
 #
+# board: [ "seeeduino_xiao_ble" ]
+# shield: [ "ferris_sweed_four_left", "ferris_sweed_four_right" ]
+# include:
+#   - board: seeeduino_xiao_ble
+#     shield: ferris_sweed_four
+
 # ---
 # include:
 #   - board: seeeduino_xiao_ble
 #     shield: two_percent_milk
-#
 file_format: "1"
 id: ferris_sweed_four
 name: ferris_sweed_four
-type: shield
 requires: [seeeduino_xiao_ble]
 features:
   - keys
 siblings:
   - ferris_sweed_four_left
-  - ferris_sweed_four_left
+  - ferris_sweed_four_right
