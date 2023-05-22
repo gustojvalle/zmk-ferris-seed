@@ -2,12 +2,12 @@
 # SPDX-License-Identifier: MIT
 
 file_format: "1"
-id: ferris_sweed_four
-name: ferris_sweed_four
+id: fsweed
+name: fsweed
 type: shield
 requires: [seeeduino_xiao_ble]
 features:
   - keys
 siblings:
-  - ferris_sweed_four_left
-  - ferris_sweed_four_right
+  - fsweed_left
+  - fsweed_right

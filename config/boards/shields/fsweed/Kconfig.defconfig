@@ -1,11 +1,11 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_FERRIS_SWEED_FOUR_LEFT
+if SHIELD_FSWEED_LEFT
 
 config ZMK_KEYBOARD_NAME
 
-    default "ferris_four"
+    default "fsweed"
 
 
 config ZMK_SPLIT_ROLE_CENTRAL
@@ -15,7 +15,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_FERRIS_SWEED_FOUR_LEFT || SHIELD_FERRIS_SWEED_FOUR_RIGHT
+if SHIELD_FSWEED_LEFT|| SHIELD_FSWEED_RIGHT
 
 config ZMK_SPLIT
 

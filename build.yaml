@@ -6,9 +6,9 @@
 #
 include:
   - board: seeeduino_xiao_ble
-    shield: ferris_sweed_four_left
+    shield: fsweed_left
   - board: seeeduino_xiao_ble
-    shield: ferris_sweed_four_right
+    shield: fsweed_right
 # ---
 # include:
 #   - board: seeeduino_xiao_ble

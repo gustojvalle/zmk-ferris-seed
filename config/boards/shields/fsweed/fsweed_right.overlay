@@ -1,10 +1,10 @@
-/*
+j*
  * Copyright (c) 2020 Pete Johanson
  *
  * SPDX-License-Identifier: MIT
  */
 
-#include "ferris_sweed_four.dtsi"
+#include "fsweed.dtsi"
 
 &default_transform {
 	col-offset = <5>;
