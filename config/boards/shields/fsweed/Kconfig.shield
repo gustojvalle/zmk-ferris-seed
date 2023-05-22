@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 config  SHIELD_FSWEED_LEFT
-    def_bool $(shields_list_contains, ferris_sweed_four_left)
+    def_bool $(shields_list_contains, fsweed_left)
 
 config SHIELD_FSWEED_RIGHT
-    def_bool $(shields_list_contains, ferris_sweed_four_right)
+    def_bool $(shields_list_contains, fsweed_right)
