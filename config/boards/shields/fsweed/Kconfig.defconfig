@@ -14,7 +14,7 @@ endif
 
 if SHIELD_FSWEED_LEFT
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
+config CONFIG_ZMK_SPLIT_ROLE_CENTRAL
 	default n
     
 endif
