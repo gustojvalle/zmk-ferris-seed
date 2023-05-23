@@ -51,8 +51,10 @@
             bindings = <&stickymt 2 2>, <&tog 2>;
         };
     };
+};
+/ {
 
-    combos {
+combos {
         compatible = "zmk,combos";
         combo_caps{
             timeout-ms = <50>;
@@ -66,9 +68,8 @@
             layers=<0>;
         };
     };
-};
-/ {
         keymap {
+
                 compatible = "zmk,keymap";
 
                 default_layer {
