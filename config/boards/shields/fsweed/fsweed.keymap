@@ -58,12 +58,12 @@ combos {
         compatible = "zmk,combos";
         combo_caps{
             timeout-ms = <50>;
-            key-positions = <21 30>;
+            key-positions = <20 29>;
             bindings = <&caps_word>;
         };
         combo_eqls{
             timeout-ms = <50>;
-            key-positions = <9 10>;
+            key-positions = <8 9>;
             bindings = <&kp EQUAL>;
             layers=<0>;
         };
