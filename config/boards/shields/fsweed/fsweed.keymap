@@ -51,6 +51,7 @@
             bindings = <&stickymt 2 2>, <&tog 2>;
         };
     };
+
     combos {
         compatible = "zmk,combos";
         combo_caps{
@@ -80,7 +81,7 @@
    &kp Q &kp W &kp E &kp R &kp T                &kp Y &kp U  &kp I     &okey   &pkey  
    &kp A &kp S &kp D &kp F &kp G                &kp H &kp J  &kp K     &kp L   &kp SEMI
    &kp Z &kp X &kp C &kp V &kp B                &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-       &kp LCTRL &kp LGUI &lone &mo 3 &kp RET &ltwo  &kp SPACE &kp BKSP
+       &kp LCTRL &kp LGUI &lone &mo 3 &kp RET &ltwo  &kp SPACE &kp BSPC
                         >;
                 };
                 lower_layer {
@@ -121,7 +122,7 @@
     &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &trans    &trans    &trans &trans    &trans
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LEFT  &kp DOWN  &kp UP &kp RIGHT &kp RET
     &trans   &trans &trans   &trans   &trans      &kp UNDER &trans    &trans &trans    &trans
-               &trans &trans  &kp LGUI &trans   &kp RSHIFT &kp SPACE &BKSP &kp RALT
+               &trans &trans  &kp LGUI &trans   &kp RSHIFT &kp SPACE &kp BSPC &kp RALT
                         >;
                 };
     };
