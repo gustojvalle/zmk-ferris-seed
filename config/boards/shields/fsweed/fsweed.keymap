@@ -124,5 +124,4 @@
                &trans &trans  &kp LGUI &trans   &kp RSHIFT &kp SPACE &BKSP &kp RALT
                         >;
                 };
-        };
 };
