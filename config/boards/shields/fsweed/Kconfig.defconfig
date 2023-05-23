@@ -7,6 +7,9 @@ if SHIELD_FSWEED_RIGHT
 config ZMK_KEYBOARD_NAME
     default "fsweed"
 
+config ZMK_SPLIT
+    default y
+
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
     
@@ -14,14 +17,11 @@ endif
 
 if SHIELD_FSWEED_LEFT
 
+config ZMK_SPLIT
+    default y
+
 config ZMK_SPLIT_ROLE_CENTRAL
 	default n
     
 endif
 
-if SHIELD_FSWEED_LEFT || SHIELD_FSWEED_RIGHT
-
-config ZMK_SPLIT_BLE
-    default y
-
-endif
