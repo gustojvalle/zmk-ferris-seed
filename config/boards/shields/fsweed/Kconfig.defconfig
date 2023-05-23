@@ -2,37 +2,19 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-# config ZMK_KEYBOARD_NAME
-# 	default "Kretstrad"
-
-# if SHIELD_KRETSTRAD_RIGHT
-
-# config ZMK_SPLIT_ROLE_CENTRAL
-# 	default y
-
-# endif
-
-# if SHIELD_KRETSTRAD_LEFT || SHIELD_KRETSTRAD_RIGHT
-
-# config ZMK_SPLIT
-# 	default y
-
-# endif
-
 config ZMK_KEYBOARD_NAME
-    default "fsweed"
+	default "Kretstrad"
 
-
-if SHIELD_FSWEED_LEFT
+if SHIELD_FSWEED_RIGHT
 
 config ZMK_SPLIT_ROLE_CENTRAL
-    default y
+	default y
 
 endif
 
-if SHIELD_FSWEED_RIGHT || SHIELD_FSWEED_LEFT
+if SHIELD_FSWEED_LEFT || SHIELD_FSWEED_RIGHT
 
 config ZMK_SPLIT
-    default y
+	default y
 
 endif
