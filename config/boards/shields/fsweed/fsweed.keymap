@@ -57,7 +57,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LGUI &kp TAB>
+                = <&kp LGUI &kp TAB>
                 ;
         };
     };
@@ -87,6 +87,42 @@ combos {
             timeout-ms = <50>;
             key-positions = <31 10>;
             bindings = <&change_app>;
+            layers=<0>;
+        };
+        combo_esc{
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+            layers=<0>;
+        };
+        combo_quote{
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp SINGLE_QUOTE>;
+            layers=<0>;
+        };
+        combo_tilde{
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp GRAVE>;
+            layers=<2>;
+        };
+        combo_lfshift{
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp LSHIFT>;
+            layers=<0>;
+        };
+        combo_rshift{
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&sk RSHIFT>;
+            layers=<0>;
+        };
+        combo_plus{
+            timeout-ms = <50>;
+            key-positions = <5 6>;
+            bindings = <&sk RSHIFT>;
             layers=<0>;
         };
     };
@@ -129,8 +165,8 @@ combos {
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
     &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
-    &kp TAB &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH
-    &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE
+    &kp TAB &trans &trans   &trans   &trans      &kp LEFT &kp DOWN &kp UP        &kp RIGHT &kp SINGLE_QUOTE
+    &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp  TILDE &kp RBRC &kp PIPE
                &trans  &kp LGUI &mo 0  &trans   &kp RSHIFT &mo 0 &kp SPACE    &kp RALT
                         >;
                 };
