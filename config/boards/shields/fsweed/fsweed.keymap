@@ -79,14 +79,14 @@ combos {
         };
         combo_ret{
             timeout-ms = <50>;
-            key-positions = <37 9>;
+            key-positions = <36 19>;
             bindings = <&kp RET>;
             layers=<0>;
         };
-        combo_app{
+        combo_tab{
             timeout-ms = <50>;
-            key-positions = <31 10>;
-            bindings = <&change_app>;
+            key-positions = <11 10>;
+            bindings = <&kp TAB>;
             layers=<0>;
         };
         combo_esc{
@@ -109,13 +109,13 @@ combos {
         };
         combo_lfshift{
             timeout-ms = <50>;
-            key-positions = <28 29>;
-            bindings = <&kp LSHIFT>;
+            key-positions = <20 21>;
+            bindings = <&sk LSHIFT>;
             layers=<0>;
         };
         combo_rshift{
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            key-positions = <28 29>;
             bindings = <&sk RSHIFT>;
             layers=<0>;
         };
