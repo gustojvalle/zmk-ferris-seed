@@ -26,14 +26,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "PKEY";
             #binding-cells = <0>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <175>;
             bindings = <&mt RBKT P>, <&mt RBRC MINUS>;
         };
          okey: okey{
             compatible = "zmk,behavior-tap-dance";
             label = "OKEY";
             #binding-cells = <0>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <175>;
             bindings = <&mt LBKT O> ;
         };
         lone:lone{
