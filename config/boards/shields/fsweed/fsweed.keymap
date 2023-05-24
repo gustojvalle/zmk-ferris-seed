@@ -51,6 +51,16 @@
             bindings = <&stickymt 2 2>, <&tog 2>;
         };
     };
+    macros {
+        change_app: change_app {
+            label = "CHANGE_APP";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI &kp TAB>
+                ;
+        };
+    };
 };
 / {
 
@@ -65,6 +75,18 @@ combos {
             timeout-ms = <50>;
             key-positions = <8 9>;
             bindings = <&kp EQUAL>;
+            layers=<0>;
+        };
+        combo_ret{
+            timeout-ms = <50>;
+            key-positions = <36 9>;
+            bindings = <&kp RET>;
+            layers=<0>;
+        };
+        combo_app{
+            timeout-ms = <50>;
+            key-positions = <31 10>;
+            bindings = <&change_app>;
             layers=<0>;
         };
     };
@@ -82,7 +104,7 @@ combos {
    &kp Q &kp W &kp E &kp R &kp T                &kp Y &kp U  &kp I     &okey   &pkey  
    &kp A &kp S &kp D &kp F &kp G                &kp H &kp J  &kp K     &kp L   &kp SEMI
    &kp Z &kp X &kp C &kp V &kp B                &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-       &kp LCTRL &kp LGUI &lone &mo 3 &kp RET &ltwo  &kp SPACE &kp BSPC
+       &kp LCTRL &kp LGUI &lone &mo 3 &kp RSHIFT &ltwo  &kp SPACE &kp BSPC
                         >;
                 };
                 lower_layer {
