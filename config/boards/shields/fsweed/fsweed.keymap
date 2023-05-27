@@ -1,13 +1,13 @@
-/*
+/*  
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
-
+      
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
+  
 
 
 /{
@@ -140,7 +140,7 @@ combos {
    &kp Q &kp W &kp E &kp R &kp T                &kp Y &kp U  &kp I     &okey   &pkey  
    &kp A &kp S &kp D &kp F &kp G                &kp H &kp J  &kp K     &kp L   &kp SEMI
    &kp Z &kp X &kp C &kp V &kp B                &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-       &kp LCTRL &kp LGUI &lone &mo 3 &kp RSHIFT &ltwo  &kp SPACE &kp BSPC
+       &kp LCTRL &kp LGUI &lone &mo 3 &sk RSHIFT &ltwo  &kp SPACE &kp BSPC
                         >;
                 };
                 lower_layer {
