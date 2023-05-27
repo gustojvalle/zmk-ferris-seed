@@ -30,7 +30,6 @@
             label = "PKEY";
             #binding-cells = <0>;
             tapping-term-ms = <160>;
-            flavor = "tap-preferred";
             bindings = <&mt RBKT P>, <&mt RBRC MINUS>;
         };
          okey: okey{
@@ -38,8 +37,7 @@
             label = "OKEY";
             #binding-cells = <0>;
             tapping-term-ms = <160>;
-            flavor = "tap-preferred";
-            bindings = <&mt RBKT P>, <&kp LBRC>;
+            bindings = <&mt RBKT O>, <&kp LBRC>;
         };
         lone:lone{
             compatible = "zmk,behavior-tap-dance";
