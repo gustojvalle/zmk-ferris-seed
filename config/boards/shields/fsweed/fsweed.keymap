@@ -8,6 +8,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+&mt{
+    tapping-term-ms=<170>
+}
 
 
 /{
@@ -36,7 +39,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <160>;
             flavor = "tap-preferred";
-            bindings = <&mt RBKT P>, &kp LBRC;
+            bindings = <&mt RBKT P>, <&kp LBRC>;
         };
         lone:lone{
             compatible = "zmk,behavior-tap-dance";
