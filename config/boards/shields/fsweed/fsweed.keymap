@@ -129,7 +129,6 @@ combos {
             timeout-ms = <50>;
             key-positions = <32 35>;
             bindings = <&mo 0>;
-            layers=<0>;
         };
     };
         keymap {
