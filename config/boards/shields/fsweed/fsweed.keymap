@@ -54,7 +54,7 @@
             label = "CHANGE_APP";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI &kp TAB>;
+            bindings = <&kp LGUI &kp TAB>;
         };
         pkey_macro: pkey_macro{
             compatible = "zmk,behavior-macro";
