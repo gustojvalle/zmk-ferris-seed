@@ -118,13 +118,13 @@ combos {
         combo_lfshift{
             timeout-ms = <50>;
             key-positions = <28 29>;
-            bindings = <&sk LSHIFT>;
+            bindings = <&shift_macro>;
             layers=<0>;
         };
         combo_rshift{
             timeout-ms = <50>;
             key-positions = <20 21>;
-            bindings = <&sk RSHIFT>;
+            bindings = <&shift_macro>;
             layers=<0>;
         };
         combo_plus{
