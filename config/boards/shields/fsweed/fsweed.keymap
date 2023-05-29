@@ -50,8 +50,6 @@
             tapping-term-ms = <160>;
             bindings = <&stickymt 2 2>, <&tog 2>;
         };
-    };
-    macros {
         change_app: change_app {
             label = "CHANGE_APP";
             compatible = "zmk,behavior-macro";
