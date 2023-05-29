@@ -60,6 +60,13 @@
                 = <&macro_press &kp LGUI &kp TAB>
                 ;
         };
+        change_app: pkey_macro{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &pkey>
+                ;
+        };
     };
 };
 / {
@@ -125,6 +132,12 @@ combos {
             bindings = <&kp PLUS>;
             layers=<0>;
         };
+        combo_p{
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&pkey_macro>;
+            layers=<0>;
+        };
         combo_panic{
             timeout-ms = <50>;
             key-positions = <32 35>;
@@ -145,7 +158,7 @@ combos {
    &kp Q &kp W &kp E &kp R &kp T                &kp Y &kp U  &kp I     &okey   &pkey  
    &kp A &kp S &kp D &kp F &kp G                &kp H &kp J  &kp K     &kp L   &kp SEMI
    &kp Z &kp X &kp C &kp V &kp B                &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-       &kp LCTRL &kp LGUI &lone &mo 3 &kp RSHIFT &ltwo  &kp SPACE &kp BSPC
+       &kp LCTRL &kp LGUI &lone &mo 3 &sk RSHIFT &ltwo  &kp SPACE &kp BSPC
                         >;
                 };
                 lower_layer {
