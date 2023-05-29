@@ -64,7 +64,7 @@
          shift_macro:shift_macro{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk SHFT>;
+            bindings = <&sk SHIFT>;
         };
     };
 };
