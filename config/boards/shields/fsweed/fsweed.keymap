@@ -59,12 +59,12 @@
         pkey_macro: pkey_macro{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &pkey>;
+            bindings = <&pkey>;
         };
          shift_macro:shift_macro{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &sk SHFT>;
+            bindings = <&sk SHFT>;
         };
     };
 };
