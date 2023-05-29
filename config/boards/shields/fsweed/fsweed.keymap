@@ -57,11 +57,13 @@
             bindings = <&kp LGUI &kp TAB>;
         };
         pkey_macro: pkey_macro{
+            label = "PKEY_MACRO";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&pkey>;
         };
          shift_macro:shift_macro{
+            label = "SHIFT_MACRO";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT>;
