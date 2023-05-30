@@ -143,6 +143,7 @@ combos {
             timeout-ms = <50>;
             key-positions = <32 35>;
             bindings = <&mo default>;
+            layers<0 1 2 3>
         };
     };
         keymap {
