@@ -142,7 +142,7 @@ combos {
         combo_panic{
             timeout-ms = <50>;
             key-positions = <32 35>;
-            bindings = <&mo default_layer>;
+            bindings = <&mo 0>;
             layers = <0 1 2 3>;
         };
     };
