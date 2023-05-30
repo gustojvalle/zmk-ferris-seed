@@ -107,7 +107,7 @@ combos {
             timeout-ms = <50>;
             key-positions = <18 19>;
             bindings = <&kp SINGLE_QUOTE>;
-            layers=<0v>;
+            layers=<0>;
         };
         combo_tab{
             timeout-ms = <50>;
