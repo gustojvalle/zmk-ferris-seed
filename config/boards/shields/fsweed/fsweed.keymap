@@ -93,7 +93,7 @@ combos {
         };
         combo_app{
             timeout-ms = <50>;
-            key-positions = <31 10>;
+            key-positions = <21 22 23>;
             bindings = <&change_app>;
             layers=<0>;
         };
@@ -107,14 +107,14 @@ combos {
             timeout-ms = <50>;
             key-positions = <18 19>;
             bindings = <&kp SINGLE_QUOTE>;
-            layers=<2>;
+            layers=<0v>;
         };
         combo_tab{
             timeout-ms = <50>;
             key-positions = <10 11>;
             bindings = <&kp TAB>;
             layers=<0>;
-        };
+            };
         combo_tilde{
             timeout-ms = <50>;
             key-positions = <18 19>;
@@ -148,7 +148,7 @@ combos {
         combo_panic{
             timeout-ms = <50>;
             key-positions = <32 35>;
-            bindings = <&tog 0>;
+            bindings = <&to 0>;
             layers = <0 1 2 3>;
         };
     };
