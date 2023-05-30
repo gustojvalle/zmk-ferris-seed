@@ -87,7 +87,7 @@ combos {
         };
         combo_ret{
             timeout-ms = <50>;
-            key-positions = <37 9>;
+            key-positions = <18 19>;
             bindings = <&kp RET>;
             layers=<0>;
         };
@@ -107,7 +107,7 @@ combos {
             timeout-ms = <50>;
             key-positions = <18 19>;
             bindings = <&kp SINGLE_QUOTE>;
-            layers=<0>;
+            layers=<2>;
         };
         combo_tilde{
             timeout-ms = <50>;
@@ -142,7 +142,7 @@ combos {
         combo_panic{
             timeout-ms = <50>;
             key-positions = <32 35>;
-            bindings = <&mo 0>;
+            bindings = <&mo default>;
         };
     };
         keymap {
