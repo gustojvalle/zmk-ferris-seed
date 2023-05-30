@@ -142,7 +142,7 @@ combos {
         combo_panic{
             timeout-ms = <50>;
             key-positions = <32 35>;
-            bindings = <&mo 0>;
+            bindings = <&tog 0>;
             layers = <0 1 2 3>;
         };
     };
@@ -173,7 +173,7 @@ combos {
    &kp F11      &kp F12      &kp N3       &kp N4       &kp N5         &trans   &kp N7   &kp N8 &kp N9    &kp N0
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp N0   &kp N4   &kp N5 &kp N6    &trans
    &sk LSHIFT    &trans      &trans       &trans       &trans         &trans   &kp N1   &kp N2 &kp N3    &sk RSHIFT
-                        &trans  &trans    &kp LGUI     &mo 0 &sk RSHIFT &kp SPACE &trans   &kp RALT
+                        &trans  &trans    &kp LGUI     &tog 0 &sk RSHIFT &kp SPACE &trans   &kp RALT
                         >;
                 };
 
@@ -187,7 +187,7 @@ combos {
     &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
     &kp TAB &trans &trans   &trans   &trans      &kp LEFT &kp DOWN &kp UP        &kp RIGHT &kp SINGLE_QUOTE
     &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp  TILDE &kp RBRC &kp PIPE
-               &trans  &kp LGUI &mo 0  &trans   &sk RSHIFT &mo 0 &kp SPACE    &kp RALT
+               &trans  &kp LGUI &tog 0  &trans   &sk RSHIFT &tog 0 &kp SPACE    &kp RALT
                         >;
                 };
 
@@ -201,7 +201,7 @@ combos {
     &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &trans    &trans    &trans &trans    &trans
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LEFT  &kp DOWN  &kp UP &kp RIGHT &kp RET
     &trans   &trans &trans   &trans   &trans      &kp UNDER &trans    &trans &trans    &trans
-               &trans   &kp LGUI &mo 0 &mo 0 &sk RSHIFT &kp SPACE &kp BSPC &kp RALT
+               &trans   &kp LGUI &tog 0  &tog 0 &sk RSHIFT &kp SPACE &kp BSPC &kp RALT
                         >;
                 };
     };
