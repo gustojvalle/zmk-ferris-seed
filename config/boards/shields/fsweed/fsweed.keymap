@@ -33,8 +33,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "OKEY";
             #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&mt LBKT O>, <&mt LBRC &trans> ;
+            tapping-term-ms = <165>;
+            bindings = <&mt LBKT O>, <&mt LBRC &kp PLUS> ;
         };
         lone:lone{
             compatible = "zmk,behavior-tap-dance";
