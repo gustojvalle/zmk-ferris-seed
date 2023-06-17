@@ -163,10 +163,9 @@ combos {
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp Q &kp W &kp E &kp R &kp T                &kp Y &kp U  &kp I     &okey   &pkey  
-   &kp A &kp S &kp D &kp F &kp G                &kp H &kp J  &kp K     &kp L   &kp SEMI
-   &kp Z &kp X &kp C &kp V &kp B                &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-       &kp LCTRL &kp LGUI &lone &mo 3 &sk RSHIFT &ltwo  &kp SPACE &kp BSPC
+               &kp E &kp R &kp T                &kp Y &kp U  &kp I       
+         &kp S &kp D &kp F &kp G                &kp H &kp J  &kp K     &kp L   
+                &kp LCTRL &kp LGUI            &kp SPACE &kp BSPC
                         >;
                 };
                 lower_layer {
@@ -176,39 +175,11 @@ combos {
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp F11      &kp F12      &kp N3       &kp N4       &kp N5         &trans   &kp N7   &kp N8 &kp N9    &kp N0
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp N0   &kp N4   &kp N5 &kp N6    &trans
-   &sk LSHIFT    &trans      &trans       &trans       &trans         &trans   &kp N1   &kp N2 &kp N3    &sk RSHIFT
-                        &trans  &trans    &kp LGUI     &to 0 &sk RSHIFT &kp SPACE &trans   &kp RALT
+        &kp N3       &kp N4       &kp N5               &trans   &kp N7   &kp N8 
+    &kp P &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4        &kp N0   &kp N4   &kp N5 &kp M
+                         &trans    &kp LGUI         &trans   &kp RALT
                         >;
                 };
 
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |
-// |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-    &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
-    &kp TAB &trans &trans   &trans   &trans      &kp LEFT &kp DOWN &kp UP        &kp RIGHT &kp SINGLE_QUOTE
-    &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp  TILDE &kp RBRC &kp PIPE
-               &trans  &kp LGUI &to 0  &trans   &sk RSHIFT &to 0 &kp SPACE    &kp RALT
-                        >;
-                };
-
-                system_layer {
-// -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |
-// |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-    &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &trans    &trans    &trans &trans    &trans
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LEFT  &kp DOWN  &kp UP &kp RIGHT &kp RET
-    &trans   &trans &trans   &trans   &trans      &kp UNDER &trans    &trans &trans    &trans
-               &trans   &kp LGUI &to 0  &to 0 &sk RSHIFT &kp SPACE &kp BSPC &kp RALT
-                        >;
-                };
     };
 };
