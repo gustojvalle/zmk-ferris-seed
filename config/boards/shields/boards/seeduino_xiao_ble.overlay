@@ -1,11 +1,12 @@
+
 #include <dt-bindings/led/led.h>
-    &leds {
+&leds {
         compatible = "gpio-leds";
         blue_led: led_0 {
             gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
             label = "Blue LED";
         };
-    };
+};
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
@@ -20,14 +21,12 @@
         };
     };
 };
-
 &i2c0 {
     compatible = "nordic,nrf-twi";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
 };
-
 &uart0 {
     compatible = "nordic,nrf-uarte";
     current-speed = <115200>;
