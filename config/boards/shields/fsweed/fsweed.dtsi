@@ -51,7 +51,7 @@
 &xiao_serial { status = "disabled"; };
 
 &xiao_i2c {
-    status = "enabled";
+    status = "okay";
     compatible = "nordic,nrf-twi";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
@@ -75,7 +75,7 @@
 
 &xiao_spi {
     compatible = "nordic,nrf-spim";
-    status = "enabled";
+    status = "okay";
     pinctrl-0 = <&spi3_default>;
     pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
