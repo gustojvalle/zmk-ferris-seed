@@ -6,6 +6,7 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/led/led.h>
+#include "fsweed-pinctrl.dtsi"
 
 / {
     chosen {
