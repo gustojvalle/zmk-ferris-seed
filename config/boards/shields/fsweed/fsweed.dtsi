@@ -33,7 +33,6 @@
         >;
     };
 
-
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
@@ -48,7 +47,7 @@
 };
 /* &xiao_spi { status = "disabled"; }; */
 /* &xiao_i2c { status = "disabled"; }; */
-&xiao_serial { status = "disabled"; };
+&xiao_serial { status = "okay"; };
 
 &xiao_i2c {
     status = "okay";
@@ -73,7 +72,7 @@
         };
 };
 
-&xiao_spi {
+&spi3 {
     compatible = "nordic,nrf-spim";
     status = "okay";
     pinctrl-0 = <&spi3_default>;
