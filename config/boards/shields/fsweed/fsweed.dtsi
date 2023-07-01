@@ -14,7 +14,6 @@
         zmk,underglow = &led_strip;
         zephyr,display = &oled;
         /* /delete-property/ zephyr,console; */
-
         /* /delete-property/ zephyr,shell-uart; */
     };
 
@@ -51,8 +50,11 @@
 &xiao_serial { status = "disabled"; };
 
 &xiao_i2c {
-        status = "okay";
-    
+    status = "okay";
+    compatible = "nordic,nrf-twi";
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
         oled: ssd1306@3c {
             compatible = "solomon,ssd1306fb";
             reg = <0x3c>;
@@ -70,47 +72,9 @@
         };
 };
 
-/* setting up configuration for seeduino , and then I'll add the overlays .  */
-/* &leds { */
-/*         compatible = "gpio-leds"; */
-/*         blue_led: led_0 { */
-/*             gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>; */
-/*             label = "Blue LED"; */
-/*         }; */
-/* }; */
-&pinctrl {
-    spi3_default: spi3_default {
-        group1 {
-            /* psels = <NRF_PSEL(SPIM_MOSI, 0, <&xiao_d 10>)>; */
-            psels = <NRF_PSEL(SPIM_MOSI, 1, 15)>;
-        };
-    };
-
-    spi3_sleep: spi3_sleep {
-        group1 {
-            /* psels = <NRF_PSEL(SPIM_MOSI, 0,<&xiao_d 10>)>; */
-            psels = <NRF_PSEL(SPIM_MOSI, 0,15)>;
-            low-power-enable;
-        };
-    };
-};
-/* &i2c0 { */
-/*     compatible = "nordic,nrf-twi"; */
-/*     pinctrl1 = <&i2c0_default>; */
-/*     pinctrl-1 = <&i2c0_sleep>; */
-/*     pinctrl-names = "default", "sleep"; */
-/* }; */
-/* &uart0 { */
-/*     compatible = "nordic,nrf-uarte"; */
-/*     current-speed = <115200>; */
-/*     pinctrl-0 = <&uart0_default>; */
-/*     pinctrl-1 = <&uart0_sleep>; */
-/*     pinctrl-names = "default", "sleep"; */
-/* }; */
 &spi3 {
     compatible = "nordic,nrf-spim";
     status = "okay";
-
     pinctrl-0 = <&spi3_default>;
     pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
@@ -133,16 +97,3 @@
 };
 
 
-&i2c0 {
-    compatible = "nordic,nrf-twi";
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
-};
-&uart0 {
-    compatible = "nordic,nrf-uarte";
-    current-speed = <115200>;
-    pinctrl-0 = <&uart0_default>;
-    pinctrl-1 = <&uart0_sleep>;
-    pinctrl-names = "default", "sleep";
-};
