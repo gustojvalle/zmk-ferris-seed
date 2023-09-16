@@ -4,6 +4,7 @@
 # control, add individual board + shield combinations to
 # the `include` property, e.g:
 #
+
 include:
   - board: seeeduino_xiao_ble
     shield: fsweed_left
