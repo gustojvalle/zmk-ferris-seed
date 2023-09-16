@@ -34,7 +34,7 @@
             label = "OKEY";
             #binding-cells = <0>;
             tapping-term-ms = <165>;
-            bindings = <&mt LBKT O>, <&mt LBRC > ;
+            bindings = <&mt LBKT O>, <&mt LBRC  PLUS> ;
         };
         lone:lone{
             compatible = "zmk,behavior-tap-dance";
