@@ -2,10 +2,10 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_FSWEED_RIGHT
+if SHIELD_9PTIMUS_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "fsweed"
+    default "9ptimus"
 
 config ZMK_SPLIT
     default y
@@ -46,7 +46,7 @@ endif # LVGL
 
 endif
 
-if SHIELD_FSWEED_LEFT
+if SHIELD_9PTIMUS_LEFT
 
 config ZMK_SPLIT
     default y

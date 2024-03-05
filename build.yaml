@@ -6,9 +6,9 @@
 #
 include:
   - board: seeeduino_xiao_ble
-    shield: fsweed_left
+    shield: 9ptimus_left
   - board: seeeduino_xiao_ble
-    shield: fsweed_right
+    shield: 9ptimus_right
   - board: seeeduino_xiao_ble
     shield: settings_reset
 # ---

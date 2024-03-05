@@ -2,12 +2,12 @@
 # SPDX-License-Identifier: MIT
 
 file_format: "1"
-id: fsweed
-name: fsweed
+id: 9ptimus
+name: 9ptimus
 type: shield
 requires: [seeeduino_xiao_ble]
 features:
   - keys
 siblings:
-  - fsweed_left
-  - fsweed_right
+  - 9ptimus_left
+  - 9ptimus_right

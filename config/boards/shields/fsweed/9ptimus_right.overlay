@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "fsweed.dtsi"
+#include "9ptimus.dtsi"
 
 &default_transform {
 	col-offset = <4>;
