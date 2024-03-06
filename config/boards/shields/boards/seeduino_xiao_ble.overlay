@@ -39,6 +39,8 @@
     pinctrl-names = "default", "sleep";
         oled: ssd1306@3c {
             compatible = "solomon,ssd1306fb";
+            spi-max-frequency = <4000000>;
+            max-frequency = <4000000>;
             reg = <0x3c>;
             label = "DISPLAY";
             width = <128>;
@@ -68,6 +70,7 @@
         /* SPI */
         reg = <0>; /* ignored, but necessary for SPI bindings */
         spi-max-frequency = <4000000>;
+        max-frequency = <4000000>;
 
         /* WS2812 */
         chain-length = <7>; /* arbitrary; change at will */
