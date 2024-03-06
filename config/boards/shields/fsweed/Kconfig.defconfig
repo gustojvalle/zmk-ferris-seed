@@ -54,7 +54,7 @@ config ZMK_SPLIT
 config ZMK_SPLIT_ROLE_CENTRAL
 	default n
     
-if ZMK_DISPLAY
+# if ZMK_DISPLAY
 
 # config I2C
 #     default y
