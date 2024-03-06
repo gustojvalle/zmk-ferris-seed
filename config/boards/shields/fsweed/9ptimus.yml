@@ -5,7 +5,7 @@ file_format: "1"
 id: 9ptimus
 name: 9ptimus
 type: shield
-requires: [seeeduino_xiao_ble]
+requires: [../seeeduino_xiao_ble.overlay, seeeduino_xiao_ble]
 features:
   - keys
 siblings:
