@@ -64,7 +64,6 @@
     pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
     max-frequency = <4000000>;
-    data_cmd-gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
 };
 
 &spi3 {
