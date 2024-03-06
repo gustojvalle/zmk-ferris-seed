@@ -5,30 +5,30 @@
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
-            /* psels = <NRF_PSEL(SPIM_MOSI, 0, <&xiao_d 10>)>; */
             psels = <NRF_PSEL(SPIM_MOSI, 1, 15)>;
         };
     };
+
     spi3_sleep: spi3_sleep {
         group1 {
-            /* psels = <NRF_PSEL(SPIM_MOSI, 0,<&xiao_d 10>)>; */
-            psels = <NRF_PSEL(SPIM_MOSI, 1,15)>;
+            psels = <NRF_PSEL(SPIM_MOSI, 1, 15)>;
             low-power-enable;
         };
     };
-        i2c0_default: i2c0_default {
-                group1 {
-                        psels = <NRF_PSEL(TWIM_SDA, 0, 04)>,
-                                <NRF_PSEL(TWIM_SCL, 0, 05)>;
-                };
-        };
 
-        i2c0_sleep: i2c0_sleep {
-                group1 {
-                        psels = <NRF_PSEL(TWIM_SDA, 0, 04)>,
-                                <NRF_PSEL(TWIM_SCL, 0, 05)>;
-                };
+    i2c0_default: i2c0_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 04)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 05)>;
         };
+    };
+
+    i2c0_sleep: i2c0_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 04)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 05)>;
+        };
+    };
 };
 
 &xiao_i2c {
@@ -39,23 +39,22 @@
     pinctrl-names = "default", "sleep";
     max-frequency = <4000000>;
     data_cmd-gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
-        oled: ssd1306@3c {
-            compatible = "solomon,ssd1306fb";
-            spi-max-frequency = <4000000>;
-            max-frequency = <4000000>;
-            reg = <0x3c>;
-            label = "DISPLAY";
-            width = <128>;
-            height = <32>;
-            segment-offset = <0>;
-            page-offset = <0>;
-            display-offset = <0>;
-            multiplex-ratio = <31>;
-            segment-remap;
-            com-invdir;
-            com-sequential;
-            prechargep = <0x22>;
-        };
+
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        label = "DISPLAY";
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        prechargep = <0x22>;
+    };
 };
 
 &spi3 {
@@ -66,7 +65,9 @@
     pinctrl-names = "default", "sleep";
     max-frequency = <4000000>;
     data_cmd-gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
+};
 
+&spi3 {
     led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
         label = "WS2812";
@@ -74,7 +75,6 @@
         /* SPI */
         reg = <0>; /* ignored, but necessary for SPI bindings */
         spi-max-frequency = <4000000>;
-        max-frequency = <4000000>;
 
         /* WS2812 */
         chain-length = <7>; /* arbitrary; change at will */
@@ -84,4 +84,3 @@
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 };
-
