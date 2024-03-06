@@ -88,3 +88,9 @@
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 };
+&zmk_ext_power_generic {
+    compatible = "zmk,ext-power-generic";
+    /* Add any required properties here */
+    /* Example: */
+    enable-gpios = <&gpioX 15 GPIO_ACTIVE_HIGH>;
+};
