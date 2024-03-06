@@ -13,36 +13,36 @@ config ZMK_SPLIT
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
-if ZMK_DISPLAY
+# if ZMK_DISPLAY
 
-config I2C
-    default y
+# config I2C
+#     default y
 
-config SSD1306
-    default y
+# config SSD1306
+#     default y
 
-config SSD1306_REVERSE_MODE
-    default y
+# config SSD1306_REVERSE_MODE
+#     default y
 
-endif # ZMK_DISPLAY
+# endif # ZMK_DISPLAY
 
-if LVGL
+# if LVGL
 
-config LV_Z_VDB_SIZE
-    default 64
+# config LV_Z_VDB_SIZE
+#     default 64
 
-config LV_Z_DPI
-    default 148
+# config LV_Z_DPI
+#     default 148
 
-config LV_Z_BITS_PER_PIXEL
-    default 1
+# config LV_Z_BITS_PER_PIXEL
+#     default 1
 
-choice LV_COLOR_DEPTH
-    default LV_COLOR_DEPTH_1
+# choice LV_COLOR_DEPTH
+#     default LV_COLOR_DEPTH_1
 
-endchoice
+# endchoice
 
-endif # LVGL
+# endif # LVGL
 
 endif
 
@@ -56,14 +56,14 @@ config ZMK_SPLIT_ROLE_CENTRAL
     
 if ZMK_DISPLAY
 
-config I2C
-    default y
+# config I2C
+#     default y
 
-config SSD1306
-    default y
+# config SSD1306
+#     default y
 
-config SSD1306_REVERSE_MODE
-    default y
+# config SSD1306_REVERSE_MODE
+#     default y
 
 endif # ZMK_DISPLAY
 
