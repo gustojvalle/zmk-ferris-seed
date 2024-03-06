@@ -1,9 +1,3 @@
-# / {
-#     chosen {
-#         zmk,underglow = &led_strip;
-#     };
-# };
-
 #include <dt-bindings/led/led.h>
 
 &xiao_serial { status = "okay"; };
