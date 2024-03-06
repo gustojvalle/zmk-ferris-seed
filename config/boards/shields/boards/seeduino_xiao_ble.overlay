@@ -58,7 +58,7 @@
        spi-cpol;
        spi-cpha;
        spi-hold-cs;
-       supply-gpios = <&gpioX 15 GPIO_ACTIVE_HIGH>;  
+       supply-gpios = <&gpio1 15 GPIO_ACTIVE_HIGH>;  
     };
 };
 
