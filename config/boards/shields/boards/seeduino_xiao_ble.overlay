@@ -1,5 +1,4 @@
 #include <dt-bindings/led/led.h>
-#include "../nrf52-bindings.h"
 
 &spi2 {
 	compatible = "nordic,nrf-spim";
