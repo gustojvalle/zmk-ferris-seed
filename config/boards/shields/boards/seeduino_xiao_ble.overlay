@@ -1,58 +1,58 @@
 #include <dt-bindings/led/led.h>
+#include "../nrf52-bindings.h"
 
-&xiao_serial { status = "okay"; };
+&spi2 {
+	compatible = "nordic,nrf-spim";
+	status = "okay";
+	pinctrl-0 = <&spi2_default>;
+	pinctrl-1 = <&spi2_sleep>;
+	cs-gpios = <&gpio1 15 GPIO_ACTIVE_LOW>; // D10
+    pinctrl-names = "default", "sleep";
+
+	led_strip: ws2812@0 {
+		compatible = "worldsemi,ws2812-spi";
+
+		/* SPI */
+		reg = <0>; /* ignored, but necessary for SPI bindings */
+		spi-max-frequency = <SPI_FREQ>;
+
+		/* WS2812 */
+		chain-length = <12>; /* arbitrary; change at will */
+		color-mapping = <LED_COLOR_ID_GREEN
+				         LED_COLOR_ID_RED
+				         LED_COLOR_ID_BLUE>;
+		spi-one-frame = <ONE_FRAME>;
+		spi-zero-frame = <ZERO_FRAME>;
+	};
+};
 
 &pinctrl {
-    spi3_default: spi3_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 1, 15)>;
-        };
-    };
+    spi2_default: spi2_default {
+		group1 {
+			psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+				<NRF_PSEL(SPIM_MOSI, 1, 15)>,
+				<NRF_PSEL(SPIM_MISO, 1, 14)>;
+		};
+	};
 
-    spi3_sleep: spi3_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 1, 15)>;
-            low-power-enable;
-        };
-    };
-
+	spi2_sleep: spi2_sleep {
+		group1 {
+			psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+				<NRF_PSEL(SPIM_MOSI, 1, 15)>,
+				<NRF_PSEL(SPIM_MISO, 1, 14)>;
+			low-power-enable;
+		};
+	};
 };
 
-
-&spi3 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    pinctrl-0 = <&spi3_default>;
-    pinctrl-1 = <&spi3_sleep>;
-    pinctrl-names = "default", "sleep";
-    max-frequency = <4000000>;
-};
-
-&spi3 {
-    led_strip: ws2812@0 {
-        compatible = "worldsemi,ws2812-spi";
-        label = "WS2812";
-
-        /* SPI */
-        reg = <0>; /* ignored, but necessary for SPI bindings */
-        spi-max-frequency = <4000000>;
-
-        /* WS2812 */
-        chain-length = <7>; /* arbitrary; change at will */
-        spi-one-frame = <0x70>;
-        spi-zero-frame = <0x40>;
-
-        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-    };
-};
 / {
-    chosen {
-        zmk,underglow = &led_strip;
-    };
-   // Node name must match original "EXT_POWER" label to preserve user settings.
-    EXT_POWER {
-        compatible = "zmk,ext-power-generic";
-        control-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
-        init-delay-ms = <200>;
-    };
+	aliases {
+		led-strip = &led_strip;
+	};
+  // Node name must match original "EXT_POWER" label to preserve user settings.
+   EXT_POWER {
+       compatible = "zmk,ext-power-generic";
+       control-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
+       init-delay-ms = <200>;
+   };
 };
