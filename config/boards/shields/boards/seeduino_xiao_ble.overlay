@@ -46,7 +46,7 @@
 
 / {
 	aliases {
-		led-strip = &led_strip;
+		zmk, underglow = &led_strip;
 	};
   // Node name must match original "EXT_POWER" label to preserve user settings.
    EXT_POWER {
