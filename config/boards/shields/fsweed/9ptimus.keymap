@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+
 
 
 
@@ -25,7 +27,7 @@
                         bindings = <
                &kp E &kp R &kp T                &kp Y &kp U  &kp I       
          &kp S &kp D &kp F &kp G                &kp H &kp J  &kp K     &kp L   
-                &kp LCTRL &rgb_ug RGB_BRI          &rgb_ug RGB_TOG &rgb_ug RGB_ON
+          &rgb_ug RGB_BRD  &rgb_ug RGB_BRI          &rgb_ug RGB_TOG &rgb_ug RGB_ON
                         >;
                 };
                 lower_layer {
