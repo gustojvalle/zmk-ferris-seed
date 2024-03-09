@@ -22,8 +22,6 @@
 				         LED_COLOR_ID_BLUE>;
 		spi-one-frame = <0x70>;
 		spi-zero-frame = <0x40>;
-		power-domain = <&rgb_power>;
-		zephyr,pm-device-runtime-auto;
 	};
 };
 
