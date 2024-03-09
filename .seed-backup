@@ -159,3 +159,9 @@ include <dt-bindings/led/led.h>
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 };
+
+   EXT_POWER {
+       compatible = "zmk,ext-power-generic";
+       control-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
+       init-delay-ms = <200>;
+   };
