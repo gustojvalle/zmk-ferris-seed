@@ -26,7 +26,7 @@
 };
 
 &i2c1 {
-	compatible = "nordic,nrf-twi";
+	compatible = "nordic,nrf-twim";
 	/* Cannot be used together with spi1. */
 	status = "okay";
 	pinctrl-0 = <&i2c1_default>;
