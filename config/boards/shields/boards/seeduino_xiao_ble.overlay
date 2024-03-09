@@ -22,16 +22,19 @@
 				         LED_COLOR_ID_BLUE>;
 		spi-one-frame = <0x70>;
 		spi-zero-frame = <0x40>;
+		power-domain = <&rgb_power>;
+		zephyr,pm-device-runtime-auto;
 	};
 };
 
 &i2c0 {
-	compatible = "nordic,nrf-twi";
+	compatible = "nordic,nrf-twim";
 	/* Cannot be used together with spi1. */
 	status = "okay";
 	pinctrl-0 = <&i2c0_default>;
 	pinctrl-1 = <&i2c0_sleep>;
 	pinctrl-names = "default", "sleep";
+  clock-frequency = <4000000>;
 
   oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
@@ -48,6 +51,7 @@
         inversion-on;
         prechargep = <0x22>;
         ready-time-ms = <50>;
+
     };
 
 };
@@ -84,6 +88,7 @@
   		low-power-enable;
   	};
   };
+
 };
 
 
@@ -94,11 +99,14 @@
 	chosen {
 		// zmk,underglow = &led_strip;
     zephyr,display = &oled;
+    zmk,battery = &vbatt;
+    zmk,default-power-domain = &core_power_domain;
 	};
   // Node name must match original "EXT_POWER" label to preserve user settings.
-   EXT_POWER {
-       compatible = "zmk,ext-power-generic";
-       control-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
-       init-delay-ms = <200>;
-   };
+  core_power_domain: core_power_domain {
+      compatible = "power-domain-gpio", "power-domain";
+      startup-delay-us = <50000>;
+      off-on-delay-us = <50000>;
+      enable-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+      zephyr,pm-device-runtime-auto;
 };
