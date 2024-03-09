@@ -99,10 +99,7 @@
 	chosen {
 		// zmk,underglow = &led_strip;
     zephyr,display = &oled;
-    zmk,battery = &vbatt;
-    zmk,default-power-domain = &core_power_domain;
 	};
-  // Node name must match original "EXT_POWER" label to preserve user settings.
   core_power_domain: core_power_domain {
       compatible = "power-domain-gpio", "power-domain";
       startup-delay-us = <50000>;
@@ -110,10 +107,6 @@
       enable-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
       zephyr,pm-device-runtime-auto;
   vbatt: vbatt {
-      compatible = "zmk,battery-voltage-divider";
-      io-channels = <&adc 2>;
-      output-ohms = <2000000>;
-      full-ohms = <(2000000 + 806000)>;
-  };
+        compatible = "zmk,battery-nrf-vddh";
+    };
 };
-
