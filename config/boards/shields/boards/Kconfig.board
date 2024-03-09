@@ -1,0 +1,5 @@
+config BOARD_NICE_NANO_V2
+    bool "seeduino_xiao_ble"
+    imply ZMK_POWER_DOMAINS
+    imply ZMK_POWER_DOMAINS_DYNAMIC_DEFAULT
+    depends on SOC_NRF52840_QIAA
