@@ -1,7 +1,8 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+      # url-base: https://github.com/zmkfirmware
+      url-base: https://github.com/infused-kim/zmk/tree/my-changes/oled-ext-pwr
   projects:
     - name: zmk
       remote: zmkfirmware
