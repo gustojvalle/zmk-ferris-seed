@@ -12,7 +12,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v3.5-device-power-management
+      revision: power/domains-and-device-runtime
       import: app/west.yml
   self:
     path: config
