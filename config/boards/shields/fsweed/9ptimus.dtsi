@@ -7,7 +7,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/led/led.h>
 #include "../boards/seeduino_xiao_ble.overlay"
-#include <dt-bindings/zmk/ext_power.h>
 
 
 / {
