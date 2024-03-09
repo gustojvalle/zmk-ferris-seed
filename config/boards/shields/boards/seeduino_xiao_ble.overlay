@@ -47,7 +47,7 @@
         com-sequential;
         inversion-on;
         prechargep = <0x22>;
-        ready-time-ms = <500>;
+        //ready-time-ms = <50>;
     };
 
 };
