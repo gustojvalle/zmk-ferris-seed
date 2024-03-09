@@ -14,14 +14,13 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
+        zmk,battery = &vbatt;
+        zmk,default-power-domain = &core_power_domain;
         // zmk,underglow = &led_strip;
         // zephyr,display = &oled;
         /* /delete-property/ zephyr,console; */
         /* /delete-property/ zephyr,shell-uart; */
     };
-
-    zmk,battery = &vbatt;
-    zmk,default-power-domain = &core_power_domain;
 
     core_power_domain: core_power_domain {
         compatible = "power-domain-gpio", "power-domain";
