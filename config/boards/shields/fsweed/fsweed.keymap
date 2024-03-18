@@ -200,7 +200,7 @@ combos {
                         bindings = <
     &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &trans    &trans    &trans &trans    &trans
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LEFT  &kp DOWN  &kp UP &kp RIGHT &kp RET
-    &bt BT_CLR &bootloader &trans &trans   &trans   &trans      &kp UNDER &trans    &trans &bootloader &kp  BACKSLASH
+    &bt BT_CLR &bootloader &trans &trans   &trans   &trans      &kp UNDER &trans     &bootloader &kp  BACKSLASH
                &trans   &kp LGUI &to 0  &to 0 &sk RSHIFT &kp SPACE &kp BSPC &kp RALT
                         >;
                 };
