@@ -103,12 +103,6 @@ combos {
             bindings = <&kp ESC>;
             layers=<0>;
         };
-        combo_quote{
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            bindings = <&kp SINGLE_QUOTE>;
-            layers=<2>;
-        };
         combo_tab{
             timeout-ms = <50>;
             key-positions = <10 11>;
