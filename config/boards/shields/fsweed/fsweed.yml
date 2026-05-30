@@ -5,7 +5,7 @@ file_format: "1"
 id: fsweed
 name: fsweed
 type: shield
-requires: [seeeduino_xiao_ble]
+requires: [seeed_xiao]
 features:
   - keys
 siblings:
